@@ -47,14 +47,14 @@ app.use(function(err, req, res, next) {
   res.render('error');
 })
 
-app.listen(3002, err => {
+app.listen(process.env.PORT, err => {
 	if (err) {
 		console.log(err);
 		process.exit(1);
 	}
 	console.log(process.env)
 	console.log(
-		`Production Server is now running on port 3002`
+		`Production Server is now running on port ${process.env.PORT}`
 	);
 });
 
